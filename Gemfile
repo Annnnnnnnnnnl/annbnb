@@ -27,6 +27,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'devise'
 
+gem 'omniauth'
+gem 'omniauth-facebook', '3.0.0'
+
 gem 'toastr-rails'
 
 gem 'sendgrid-rails', '~> 2.0', '>= 2.0.5'

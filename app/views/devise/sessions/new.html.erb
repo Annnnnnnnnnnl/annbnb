@@ -24,6 +24,8 @@
       <%= link_to "Forget Password", new_user_password_path,:class => "btn btn-primary"%>
     </div>
   <% end %>
-  <%= render "devise/shared/links" %>
+  <hr>
+  <%= link_to "Sign In with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-facebook" %>
+
  </div>
 </div>
