@@ -27,6 +27,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'devise'
 
+gem "paperclip", "~> 5.0.0"
+
 gem 'omniauth'
 gem 'omniauth-facebook', '3.0.0'
 
