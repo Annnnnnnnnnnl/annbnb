@@ -31,6 +31,7 @@ gem "paperclip", "~> 5.0.0"
 
 gem 'omniauth'
 gem 'omniauth-facebook', '3.0.0'
+gem 'omniauth-google-oauth2'
 
 gem 'toastr-rails'
 
