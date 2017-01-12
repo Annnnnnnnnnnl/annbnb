@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
   color: #565a5c;
@@ -21,12 +23,24 @@ body {
   font-weight: 400;
 }
 
-
 .btn-facebook, .btn-facebook:hover {
 	background: #3b5998;
-	border-color: #3b5998;
+  border: 1px solid #3b5998;
+  border-radius: 2px;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+
 }
 
+
+.btn-google, .btn-google:hover {
+	background: #009933;
+  border: 1px solid #3b5998;
+  border-radius: 2px;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+
+}
 
 .btn-primary.btn {
   border: 1px solid #ff5a5f;
@@ -217,4 +231,13 @@ input[type="checkbox"]:checked:before {
 
 .panel-heading.preview img{
   width: 100%;
+}
+
+.amenities li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.text-line-through {
+  text-decoration: line-through
 }
