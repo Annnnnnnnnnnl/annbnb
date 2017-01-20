@@ -35,6 +35,8 @@ gem 'omniauth-google-oauth2'
 
 gem 'toastr-rails'
 
+gem 'geocoder'
+
 gem 'font-awesome-sass'
 
 gem 'sendgrid-rails', '~> 2.0', '>= 2.0.5'

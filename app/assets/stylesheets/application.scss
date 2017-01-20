@@ -35,7 +35,7 @@ body {
 
 .btn-google, .btn-google:hover {
 	background: #009933;
-  border: 1px solid #3b5998;
+  border: 1px solid #009933;
   border-radius: 2px;
   color: #fff;
   padding: 10px 25px 10px 25px;
@@ -207,6 +207,8 @@ input[type="checkbox"]:checked:before {
 .btn-file {
     position: relative;
     overflow: hidden;
+    width: 400px;
+    height: 300px
 }
 
 .btn-file input[type=file] {

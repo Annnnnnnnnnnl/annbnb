@@ -23,6 +23,8 @@ class RoomsController < ApplicationController
         params[:images].each do |image|
           @room.photos.create(image:image)
         end
+      else
+        
       end
 
       @photos = @room.photos
@@ -33,6 +35,11 @@ class RoomsController < ApplicationController
   end
 
   def edit
+
+    render
+    flash[:alert] = "Please provide all information for this room."
+
+
     if current_user.id == @room.user.id
       @photos = @room.photos
     else
