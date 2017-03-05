@@ -44,7 +44,7 @@ Rails.application.configure do
       port: 587,
       enable_starttls_auto: true,
       user_name: 'annl',
-      password: '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',
+      password: ENV['SENDGTID_PASSWORD'],
       authentication: 'plain'
   }
 end
