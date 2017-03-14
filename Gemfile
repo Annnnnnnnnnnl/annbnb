@@ -27,6 +27,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'devise'
 
+gem 'jquery-ui-rails'
+gem 'jquery-ui-sass-rails'
+gem 'jquery-ui-themes'
+
 gem "paperclip", "~> 5.0.0"
 
 gem 'omniauth'
