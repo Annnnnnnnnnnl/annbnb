@@ -2,6 +2,26 @@ class ReservationsController < ApplicationController
 
   before_action :authenticate_user!
 
+  def preload
+		room = Room.find(params[:room_id])
+		today = Date.today
+		reservations = room.reservations.where("start_date >= ? OR end_date >= ?", today, today)
+
+		render json: reservations
+	end
+
+	def preview
+		start_date = Date.parse(params[:start_date])
+		end_date = Date.parse(params[:end_date])
+
+		output = {
+			conflict: is_conflict(start_date, end_date)
+		}
+
+		render json: output
+	end
+
+
   def create
     @reservation = current_user.reserations.create (reservation_params)
 
