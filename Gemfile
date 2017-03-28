@@ -29,7 +29,6 @@ gem 'devise'
 
 gem 'jquery-ui-rails'
 gem 'jquery-ui-sass-rails'
-gem 'jquery-ui-themes'
 
 gem "paperclip", "~> 5.0.0"
 
