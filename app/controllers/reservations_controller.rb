@@ -1,5 +1,4 @@
 class ReservationsController < ApplicationController
-
   before_action :authenticate_user!
 
   def preload
@@ -21,6 +20,11 @@ class ReservationsController < ApplicationController
 		render json: output
 	end
 
+  def create
+    @reservation = current_user.reservations.create (reservation_params)
+    redirect_to @reservation.room, notice: "Your reservation is succssful..."
+  end
+
   def your_trips
 		@trips = current_user.reservations
 	end
@@ -29,11 +33,6 @@ class ReservationsController < ApplicationController
     @rooms = current_user.rooms
   end
 
-  def create
-    @reservation = current_user.reserations.create (reservation_params)
-
-    redirect_to @reservation.rooms, notice: "Your reservation is successful..."
-  end
 
   private
     def  reservation_params
