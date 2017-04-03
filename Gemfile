@@ -45,6 +45,8 @@ gem 'font-awesome-sass'
 gem 'private_pub'
 gem 'thin'
 
+gem 'ransack'
+
 gem 'sendgrid-rails', '~> 2.0', '>= 2.0.5'
 
 group :development, :test do
