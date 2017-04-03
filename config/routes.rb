@@ -17,6 +17,10 @@ Rails.application.routes.draw do
     resources :reservations, only: [:create]
   end
 
+  resources :rooms do
+    resources :reviews, only: [:create, :destory]
+  end
+
   resources :conversations, only: [:index, :create] do
     resources :messages, only: [:index, :create]
   end

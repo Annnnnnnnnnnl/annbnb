@@ -8,6 +8,11 @@ class RoomsController < ApplicationController
 
   def show
     @photos = @room.photos
+
+    @booked = Reservation.where("room_id = ? AND user_id= ?", @room.id, current_user.id).present? if current_user
+
+    @reviews = @room.reviews
+    @hasReview = @reviews.find_by(user_id: current_user.id)
   end
 
   def new
@@ -23,8 +28,6 @@ class RoomsController < ApplicationController
         params[:images].each do |image|
           @room.photos.create(image:image)
         end
-      else
-        
       end
 
       @photos = @room.photos
@@ -38,7 +41,6 @@ class RoomsController < ApplicationController
 
     render
     flash[:alert] = "Please provide all information for this room."
-
 
     if current_user.id == @room.user.id
       @photos = @room.photos
